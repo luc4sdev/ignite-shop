@@ -1,40 +1,66 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+---
 
-First, run the development server:
+## 💻 Sobre 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+O objetivo do projeto é criar uma aplicação de e-commerce com produtos, checkout e tela de sucesso.
+
+--- 
+
+## 🚀 Link do projeto hospedado na Vercel (clique para entrar)
+
+<a href="https://ignite-timer-three-ashy.vercel.app/" target="_blank" rel="external">
+<img src="src/assets/background.png" height="400" width="800" alt="Imagem do Projeto">
+</a>
+<h2>Link: <a href="https://ignite-timer-three-ashy.vercel.app/" target="_blank" rel="external">Acesse aqui</a></h2>
+
+
+--- 
+
+## 💻 Pré-requisitos
+
+Antes de começar, verifique se você atendeu aos seguintes requisitos:
+* Você tem uma máquina `<Windows / Linux / Mac>`
+* Você instalou a versão mais recente do `NodeJS`
+
+
+## ⚙️ Instalando
+
+Para instalar execute no terminal:
+
+npm:
+```
+npm i
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+yarn:
+```
+yarn install
+```
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## 🚀 Rodando o projeto
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Para rodar o projeto, execute no terminal:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+npm:
+```
+npm run dev
+```
+yarn:
+```
+yarn dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 🚀 Tecnologias utilizadas
 
-## Learn More
+O projeto está desenvolvido utilizando as seguintes tecnologias:
 
-To learn more about Next.js, take a look at the following resources:
+- ReactJS <img width="20px" height="20px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
+- NextJS
+- Stitches
+- Stripe
+- Axios
+--- 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
