@@ -42,23 +42,24 @@ export default function Product({ product }: ProductProps) {
         }
     }
 
+
     return (
 
         <>
             <Head>
-                <title>{product.name} | Ignite Shop</title>
+                <title>{product?.name} | Ignite Shop</title>
             </Head>
 
             <ProductContainer>
                 <ImageContainer>
-                    <Image src={product.imageUrl} width={520} height={480} alt="" />
+                    <Image src={product?.imageUrl} width={520} height={480} alt="" />
                 </ImageContainer>
 
                 <ProductDetails>
-                    <h1>{product.name}</h1>
-                    <span>{product.price}</span>
+                    <h1>{product?.name}</h1>
+                    <span>{product?.price}</span>
 
-                    <p>{product.description}</p>
+                    <p>{product?.description}</p>
 
                     <button disabled={isCreatingCheckoutSession} onClick={handleBuyProduct}>Comprar agora</button>
                 </ProductDetails>
@@ -81,9 +82,27 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps<any, { id: string }> = async ({ params }) => {
 
     const productId = params ? params.id : ''
+
     const product = await stripe.products.retrieve(productId, {
         expand: ['default_price'],
     })
+
+    if (!product) {
+        return {
+            props: {
+                product: {
+                    id: '1',
+                    name: 'a',
+                    imageUrl: '1',
+                    url: '1',
+                    price: '21',
+                    description: 'desc',
+                    defaultPriceId: '1',
+                }
+            },
+            revalidate: 60 * 60 * 1, // 1 hour
+        };
+    }
 
     const price = product.default_price as Stripe.Price
 
